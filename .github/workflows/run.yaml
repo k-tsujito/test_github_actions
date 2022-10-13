@@ -1,3 +1,6 @@
+env:
+  SOME_VAR: '[my github actions workflow]'
+
 name: learn-github-actions
 on: [push]
 jobs:
@@ -14,3 +17,5 @@ jobs:
           cd .github/workflows/
           ls -al
           whoami
+          echo ${{ env.SOME_VAR }}
+          php --version
